@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+{% load static %}
+{#    Здесь когда-нибудь будет качественный заголовок, но у меня нет вдохновления его создавать #}
+
+    <div id="crg_hub" class="container image_st_pos">
+        <a class="tab_hide"><img src="{% static "custom/img/crg_coin.jpg" %}"></a>
+        <p id="text_in_hub" class="text-center m-1 in_st_pos h2">Quam ueritas, fit ui in contemplatione magnae fint delegationes mentis no * ftrtAnquo tamen fi c flantur ueritas cringenium.</p>
+        <a class="tab_hide"><img src="{% static "custom/img/crg_mess.jpg"%}"></a>
+    </div>
+
+
+{#    Карточки программистов / разботчиков / членов комманды. Пока что тут, нет необходимости далеко убирать.#}
+
+    <div class="row m-5" style="margin-top: 50px">
+        <div class="col-sm-6" style="margin-bottom: 20px">
+            <div class="card bg-dark" style="border: 3px solid #a255fd; border-radius: 10px">
+                <div class="card-header text-center" style="background-color: #a255fd; border: 2px solid #000000; border-top-left-radius: 15px; border-top-right-radius: 15px">
+                    <h3 class="c_hover_gr">
+                        Mister Green.
+                    </h3>
+                </div>
+                <div class="card-body bg-dark" style="border: 1px solid black; border-radius: 5px">
+                    <h5 class="card-title">Особое обращение с заголовком</h5>
+                    <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-6" style="margin-bottom: 20px">
+            <div class="card bg-dark" style="border: 3px solid #a255fd; border-radius: 10px">
+                <div class="card-header text-center" style="background-color: #a255fd; border: 2px solid #000000; border-top-left-radius: 15px; border-top-right-radius: 15px">
+                    <h3>
+                        Mister White.
+                    </h3>
+                </div>
+                <div class="card-body bg-dark" style="border: 1px solid black; border-radius: 5px">
+                    <h5 class="card-title">Особое обращение с заголовком</h5>
+                    <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-4" style="margin-bottom: 10px">
+            <div class="card bg-dark" style="border: 3px solid #a255fd; border-radius: 10px">
+                <div class="card-header text-center" style="background-color: #a255fd; border: 2px solid #000000; border-top-left-radius: 15px; border-top-right-radius: 15px">
+                    <h3>
+                        Mister other.
+                    </h3>
+                </div>
+                <div class="card-body bg-dark" style="border: 1px solid black; border-radius: 5px">
+                    <h5 class="card-title">Особое обращение с заголовком</h5>
+                    <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-4" style="margin-bottom: 10px">
+            <div class="card bg-dark" style="border: 3px solid #a255fd; border-radius: 10px">
+                <div class="card-header text-center" style="background-color: #a255fd; border: 2px solid #000000; border-top-left-radius: 15px; border-top-right-radius: 15px">
+                    <h3>
+                        Mister And.
+                    </h3>
+                </div>
+                <div class="card-body bg-dark" style="border: 1px solid black; border-radius: 5px">
+                    <h5 class="card-title">Особое обращение с заголовком</h5>
+                    <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-4" style="margin-bottom: 10px">
+            <div class="card bg-dark" style="border: 3px solid #a255fd; border-radius: 10px">
+                <div class="card-header text-center" style="background-color: #a255fd; border: 2px solid #000000; border-top-left-radius: 15px; border-top-right-radius: 15px">
+                    <h3>
+                        Mister And to.
+                    </h3>
+                </div>
+                <div class="card-body bg-dark" style="border: 1px solid black; border-radius: 5px">
+                    <h5 class="card-title">Особое обращение с заголовком</h5>
+                    <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
+                </div>
+             </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

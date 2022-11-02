@@ -1,0 +1,81 @@
+/*Нужно пороботать с шириной всего сайта.*/
+
+
+.c_hover_gr:hover {
+    color: greenyellow;
+    transition: 1s;
+    font-size: 175%;
+}
+
+/*Настроить размеры отступов сверху и снизу более гибко.
+ Поиграться с шириной. Настроить background-size и прочее.*/
+.image_st_pos {
+    transition: 2s;
+    background: #060610 url("img/crg_bg.png");
+    width: 90%;
+    /*border: 2px solid black;*/
+    border-radius: 10px;
+    min-height: 400px;
+    padding-top: 14%;
+    text-align: center;
+    background-size: 160%;
+    background-position-x: 85%;
+}
+
+/* Перевожу меняю положение заднего плана со смещением в правую сторону(не смотри на смещение bg-pos*/
+/* Нужно будет либо сделать гибким для разных мониторов, либо позже настроить особенное в зависимости от разрешения*/
+.to_coin{
+    transition: 2s;
+    background-position-x: -5%;
+}
+/* Аналогично классу "to_coin" */
+.to_mess {
+    transition: 2s;
+    background-position-x: 160%;
+}
+/* Сбрасывает изменение, произоводимое классами выше*/
+.back_to_normal {
+    transition: 2s;
+    background-position-x: 85%;
+}
+
+/* Настрой параграфа внутри div.image_st_pos */
+p.in_st_pos {
+    display: inline-block;
+    max-width: 70%;
+    vertical-align: middle;
+}
+/* Запускает анимацию скрытия текста*/
+.text_to_hide_mode {
+    animation: anim_text_left 3s linear forwards;
+}
+
+@keyframes anim_text_left {
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Из скрытого текста с помощью анимаций делает видимый текст */
+.text_to_show_mode {
+    opacity: 0;
+    animation: anim_to_center 1800ms linear forwards;
+}
+
+@keyframes anim_to_center {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+a.tab_hide {
+    display: none;
+}
+

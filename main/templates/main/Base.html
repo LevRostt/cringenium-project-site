@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+{#   Подключение bootstrap5 (CSS)   #}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "dist/css/bootstrap.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static "custom/custom.css" %}">
+{#         Подключение иконки. !!!переработать иконку!!!   #}
+    <link rel="shortcut icon" href="{% static "custom/img/favicon.ico" %}" type="image/x-icon">
+    <title>CRINGENIUM</title>
+</head>
+
+{# Задаю глобальные базовые настройки для всего интерфейса #}
+
+<body style="background-color: #212529; color: #ffffff; z-index: 100">
+
+{# Прописываю header  #}
+    <header>
+{#        Настраиваю цвет и дизайн меню навигации   #}
+      <div class="navbar navbar-dark bg-dark shadow-sm" style="border-bottom: 1px solid #a255fd">
+{#          Весь header контент внутри контейнера. Цетрирование с помощью justify #}
+        <div class="container justify-content-center">
+{#          В <div> определяю текст который будет сначала выводиться, а потом, с помощью кнопки, можно будет его убирать и обратно. #}
+            <div class="collapse show" id="navbarToggleExternalContent">
+                <div class="p-4">
+                    <a class="text-center" href="{% url 'home' %}" style="text-decoration: none"><h4 class="text-white">Main page</h4></a>
+                    <span class="text-center text-muted">What you gonna do?</span>
+                </div>
+            </div>
+{#            Обработка самой кнопки для вывода текста в header     #}
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler border-top-0 shadow-lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="border-bottom: 1px solid #a255fd">
+{#                        ?h1?  #}
+                        <p class="h1">
+                            CRINGENIUM
+                        </p>
+                    </button>
+                </div>
+            </nav>
+        </div>
+      </div>
+    </header>
+
+
+{#        <!-- Задаю простейший дизайн главного контейнера, в котором будет весь контент сайта. -->#}
+
+    <div style="margin-left: auto; margin-right: auto; max-width: 65%; padding-bottom: 20px; background-color: #7400fd; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px">
+        <br>
+        {%  block body %}
+
+    {#        <!-- Именно сюда будет интегрирован весь текст после подключения этого файла к какому-либо другому -->#}
+
+        {%  endblock %}
+    </div>
+
+    <br>
+
+{#    Подключение JS файлов #}
+    {% load static %}
+    <script defer src="{% static "dist/js/bootstrap.js" %}"></script>
+    <script src="{% static "custom/scripts.js" %}"></script>
+
+</body>
+</html>
